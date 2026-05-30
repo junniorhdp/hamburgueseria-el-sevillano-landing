@@ -1,0 +1,750 @@
+:root {
+
+    --primary: #f4a300;
+    --secondary: #d2691e;
+    --dark: #1f1f1f;
+    --wood: #6b4423;
+    --light: #fff8ee;
+    --white: #ffffff;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    background: var(--light);
+    color: var(--dark);
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Navbar profesional*/
+
+.navbar {
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background: rgba(0,0,0,.8);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 999;
+}
+
+.logo {
+
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: var(--primary);
+    letter-spacing: 2px;
+
+}
+
+.navbar nav {
+
+    display: flex;
+    gap: 25px;
+}
+
+.navbar nav a {
+
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+
+    color: var(--primary);
+}
+
+/*Hero*/
+
+.hero {
+
+    height: 100vh;
+
+    background-image:
+        url('../img/hero/hero.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.7),
+            rgba(0,0,0,.5)
+        );
+}
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    text-align: center;
+
+    color: white;
+
+    max-width: 800px;
+
+    padding: 20px;
+}
+
+.hero-content h1 {
+
+    font-family: 'Bebas Neue', sans-serif;
+
+    font-size: 5rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.btn-primary {
+
+    background: var(--primary);
+    color: black;
+}
+
+.btn-primary:hover {
+
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+
+    border: 2px solid white;
+    color: white;
+}
+
+/*Especialidades*/
+
+.specialties{
+
+    padding:100px 8%;
+}
+
+.section-title{
+
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+
+    font-family:'Bebas Neue',sans-serif;
+    font-size:3.5rem;
+    color:var(--wood);
+}
+
+.section-title p{
+
+    margin-top:10px;
+    color:#666;
+}
+
+.specialties-grid{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+}
+
+.card img{
+
+    width:100%;
+    height:250px;
+
+    object-fit:cover;
+}
+
+.card-content{
+
+    padding:25px;
+}
+
+.card-content h3{
+
+    margin-bottom:10px;
+    color:var(--wood);
+}
+
+/* POR QUÉ ELEGIRNOS */
+
+.benefits{
+
+    background:white;
+    padding:100px 8%;
+}
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+}
+
+.benefit{
+
+    background:var(--light);
+
+    padding:40px;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    transition:.3s;
+}
+
+.benefit:hover{
+
+    transform:translateY(-8px);
+}
+
+.benefit span{
+
+    font-size:3rem;
+}
+
+/* Reseñas */
+
+.reviews{
+
+    padding:100px 0;
+    overflow:hidden;
+}
+
+.reviews-wrapper{
+
+    overflow:hidden;
+}
+
+.reviews-track{
+
+    display:flex;
+
+    width:max-content;
+
+    animation:
+    scrollReviews 35s linear infinite;
+}
+
+.review-card{
+
+    width:320px;
+
+    margin-right:25px;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.08);
+}
+
+.review-card h4{
+
+    margin-top:15px;
+
+    color:var(--secondary);
+}
+
+@keyframes scrollReviews {
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* Whatsapp */
+
+.whatsapp{
+
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:65px;
+    height:65px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-decoration:none;
+
+    font-size:2rem;
+
+    z-index:999;
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.2);
+}
+
+/* Estadisticas */
+
+.stats{
+
+    background:var(--wood);
+    color:white;
+
+    padding:80px 8%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(200px,1fr));
+
+    text-align:center;
+
+    gap:30px;
+}
+
+.stat h3{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:4rem;
+
+    color:var(--primary);
+}
+
+.stat p{
+
+    margin-top:10px;
+}
+
+/* Galeria */
+
+.gallery{
+
+    padding:100px 8%;
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.04);
+}
+
+/* Ubicacion */
+
+.location {
+
+    background:
+    linear-gradient(
+        to bottom,
+        #fff,
+        #fff8ee
+    );
+
+    padding:120px 8%;
+}
+
+.location-content {
+
+    display:grid;
+
+    grid-template-columns:
+    450px 1fr;
+
+    gap:40px;
+
+    align-items:stretch;
+}
+
+.location-card {
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.08);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+}
+
+.location-badge {
+
+    background:var(--primary);
+
+    color:black;
+
+    width:max-content;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    margin-bottom:20px;
+}
+
+.location-card h3 {
+
+    font-size:2.2rem;
+
+    color:var(--wood);
+
+    margin-bottom:20px;
+}
+
+.location-description {
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+.info-item {
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:18px;
+}
+
+.info-item span {
+
+    font-size:1.4rem;
+}
+
+.location-buttons {
+
+    display:flex;
+
+    gap:15px;
+
+    margin-top:25px;
+
+    flex-wrap:wrap;
+}
+
+.btn-location {
+
+    background:var(--wood);
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.btn-location:hover {
+
+    transform:translateY(-3px);
+}
+
+.map-container {
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+}
+
+.map-container iframe {
+
+    width:100%;
+
+    height:100%;
+
+    min-height:500px;
+
+    border:none;
+}
+
+
+
+/* Footer */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:80px 8%;
+}
+
+footer h3{
+
+    font-family:'Bebas Neue',sans-serif;
+
+    font-size:2.5rem;
+
+    color:var(--primary);
+}
+
+.footer-links{
+
+    margin:30px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+}
+
+.footer-links a{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+.footer-links a:hover{
+
+    color:var(--primary);
+}
+
+/* Responsive movil */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+
+        font-size:3rem;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+    .navbar nav{
+
+        display:none;
+    }
+
+    .location-content{
+
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+
+        font-size:2.5rem;
+    }
+
+    .review-card{
+
+        width:260px;
+    }
+
+    .location-card {
+
+    padding:30px;
+    }
+
+    .location-buttons {
+
+    flex-direction:column;
+    }
+
+}
+
+/* Marcas de agua */
+
+.demo-notice{
+    margin-top:20px;
+    font-size:.9rem;
+    opacity:.7;
+}
+
+.demo-badge{
+
+    position:fixed;
+
+    top:90px;
+    right:20px;
+
+    background:#d2691e;
+
+    color:white;
+
+    padding:10px 15px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    z-index:999;
+}
+
+.demo-notice2{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    font-size:.95rem;
+
+    color:#777;
+
+    font-style:italic;
+
+    max-width:700px;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
